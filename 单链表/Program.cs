@@ -38,7 +38,7 @@ namespace 单链表
 
         public Node<T> GetLastNode(Node<T> headNode)
         {
-            if (headNode.Next == null)
+            if (headNode.Next == null) 
             {
                 return headNode;
             }
