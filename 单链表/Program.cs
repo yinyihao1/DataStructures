@@ -30,10 +30,21 @@ namespace 单链表
         public T Data { get; set; }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="headNode"></param>
+        /// <param name="data"></param>
         public void Add(Node<T> headNode,T data)
         {
             Node<T> add_node = new Node<T>() { Data=data};
             headNode.GetLastNode(headNode).Next = add_node;
+        }
+
+        public T Delete()
+        {
+
+            return default(T);
         }
 
         public Node<T> GetLastNode(Node<T> headNode)
