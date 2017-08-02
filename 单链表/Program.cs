@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace 单链表
 {
@@ -17,7 +14,13 @@ namespace 单链表
                 headNode.Add(headNode, _data++);
             }
             Console.WriteLine(headNode.GetLastNode(headNode).Data);
+
+            
+             
+
         }
+
+
     }
 
     /// <summary>
@@ -31,14 +34,20 @@ namespace 单链表
 
 
         /// <summary>
-        /// 
+        /// 新增节点
         /// </summary>
-        /// <param name="headNode"></param>
-        /// <param name="data"></param>
+        /// <param name="headNode">头节点</param>
+        /// <param name="data">要增加节点数据</param>
         public void Add(Node<T> headNode,T data)
         {
             Node<T> add_node = new Node<T>() { Data=data};
             headNode.GetLastNode(headNode).Next = add_node;
+        }
+
+        public int GetLength(Node<T> headNode)
+        {
+
+            return 0;
         }
 
         public T Delete()
